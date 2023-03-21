@@ -6,7 +6,7 @@ def homepage(request):
 
 def test(request):
     todo_list = ToDo.objects.all()
-    return render(request, "test.html")
+    return render(request, "test.html", {"todo_list": todo_list})
 
 def homework(request):
-    return render(request, "homework.html", {"todo_list": todo_list})
+    return render(request, "homework.html")
